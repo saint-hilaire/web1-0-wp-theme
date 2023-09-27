@@ -88,6 +88,24 @@ main {
 	display: block;
 }
 
+.site {
+	border: 4px double #111;
+	margin: 1px;
+	min-height: 100vh;
+}
+
+.site-title,
+.menu-header-menu-container,
+.site-main {
+	padding-left: 2%;
+}
+
+.main-navigation {
+	border-top: 3px solid #111;
+	border-bottom: 3px solid #111;
+	padding: 0.5em 0 0.5em;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -95,6 +113,10 @@ main {
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
+}
+
+p {
+	font-size: 1.5em;
 }
 
 /* Grouping content
@@ -403,7 +425,6 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -472,7 +493,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #ccc;
 }
 
 hr {
@@ -555,19 +576,30 @@ a:active {
 	outline: 0;
 }
 
+.site-title a,
+.site-title a:visited,
+.current-menu-item button a,
+.current-menu-item button a:visited {
+	color: #4169e1;
+}
+
+.web1-0-nav-button a,
+.web1-0-nav-button a:visited {
+	color: #111;
+}
+
 /* Forms
 --------------------------------------------- */
+
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	background-color: #ccc;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	border-top: 2px solid white;
+	border-left: 2px solid white;
 }
 
 button:hover,
@@ -585,7 +617,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	border-color: #ccc #bbb #aaa;
 }
 
 input[type="text"],
@@ -605,8 +637,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	border: 1px solid black;
 	padding: 3px;
 }
 
@@ -697,6 +728,14 @@ textarea {
 	text-decoration: none;
 }
 
+.menu-item {
+	padding: 0px 1px 0px 1px;
+}
+
+.menu-item button {
+	font-size: 1.5em;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -741,6 +780,11 @@ textarea {
 	flex: 1 0 50%;
 }
 
+.site-header {
+	border-bottom: 3px double #111;
+	padding-bottom: 3px;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -760,11 +804,16 @@ textarea {
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	padding: 0em 2em 0em 2em;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-footer span {
+	margin: 0 2px 0 2px;
 }
 
 /* Comments

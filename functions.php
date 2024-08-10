@@ -176,4 +176,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_filter( 'get_site_icon_url', '__return_false' );
